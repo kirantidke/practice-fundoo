@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forgot email</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/forget.css">
+</head>
+
+<body>
+
+    <!---------------main section------------------->
+    <div class="first-container mx-auto my-auto">
+        <div class="content">
+            <div id="form" class="form-content">
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="form-head">
+                            <!------------title------------->
+                            <div class="fundoo-tittle">
+                                <span style=" color: #0606f8">F</span>
+                                <span style=" color: #d10303">u</span>
+                                <span style=" color: #f0b000">n</span>
+                                <span style=" color: #0606f8 ">d</span>
+                                <span style=" color: green">o</span>
+                                <span style=" color: #d10303">o</span>
+                            </div><br>
+                            <h2 class="title">Forgot password</h2>
+                            <h3 class="title">Create your Fundoo Account</h3>
+                        </div>
+                        <div class="text-field">
+                            <div class="row g-3">
+                                <div class="col-lg-12 col-sm-12 col-md-12">
+                                    <div class="form-outline">
+                                        <input type="text" id="username" class="form-control" autocomplete="off" />
+                                        <label class="form-label" for="user1">Email or phone</label>
+                                        <small>Error msg</small>
+                                    </div><br>
+                                    <!---- <span id="firstname" class="text-danger font-weight-bold"> </span>
+                                             -->
+
+                                </div>
+
+                                <div class="sign-in">
+                                    <div class="row g-3">
+                                        <div class="col-12 col-sm-6">
+                                            <button type="button" class="btn button2"
+                                                onclick="document.location='reset.html'">Reset password</button>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <!--<button type="button" class="btn button2">Sign in instead</button>
+                                    -->
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <input class="btn btn-primary" id="submit" onclick="forgotvalidate ()"
+                                                value="Send">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+
+    <script type="text/javascript" src="../js/valid.js"></script>
+    <script type="text/javascript" src="../service/sevice.js"></script>
+
+    <script type="module/javascript" src="../service/sevice.js"></script>
+
+</body>
+
+</html>

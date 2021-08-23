@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+}
+.first-container{
+    /* margin-top: 20px; */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    padding: 48px 40px 25px;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: rgb(187, 185, 185);
+    border-radius: 10px;
+    width: 30rem;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    
+}
+
+.form-head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-content{
+    width: 100%;
+}
+.title{
+    font-size:24px;
+    padding-bottom: 5px;
+}
+.fundoo-tittle{
+    font-size: 25px;
+}
+/*
+.text-field{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}*/
+.username{
+    margin-top: 10px;
+}
+.username input.form-control{
+    padding-right: 186px;
+    padding-bottom: 40px;
+}
+.button2{
+    background-color: transparent;
+    color: #1a73e8;
+    box-shadow: none;
+    transition:  0.3s ease-in;
+    text-transform: none;
+}
+.button2:hover{
+    background-color:rgba(26, 115, 232, 0.281) ;
+    color: #1a73e8;
+    box-shadow: none;
+}
+.right-button{
+    padding-left: 30%;
+}
+.password{
+    margin-top: 10%;
+}
+.checkbox{
+    margin-top: 10%;
+}
+
+.char-text{
+    font-size: 10px;
+} 
+.sign-in{
+    margin: 7% 0 11%;
+}
+.sign{
+    font-size: 14px;
+    color: rgb(41, 41, 223);
+}
+.picture{
+    width:244px;
+    height: 244px;
+}
+.form-outline input{
+    align-items: center;
+}
+.form-outline.success input{
+    border-color: #2ecc71;
+}
+.form-outline.error input{
+    border-color: red;
+}
+.form-outline small{
+    color: red;
+    position: absolute;
+    bottom: 0p;
+    left: 0;
+    visibility: hidden;
+    }
+.form-outline.error small{
+visibility: visible;
+}
+.form-outline.error input{
+    border-color: #e74c3c;     
+}
+.form-outline small{
+color: #e74c3c;
+position: absolute;
+visibility: hidden;
+}
+
+.form-outline.error small{
+    visibility: visible;
+ }

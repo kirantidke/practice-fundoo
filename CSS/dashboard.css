@@ -1,0 +1,573 @@
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+}
+
+/*************************************************** NavBar Here *********************************************/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 64px;
+  align-items: center;
+  border-bottom: 1px solid gainsboro;
+}
+
+.subnav-one {
+  display: flex;
+  justify-content: center;
+  width: 15%;
+  height: 45px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.subnav-two {
+  display: flex;
+  flex-direction: row;
+  width: 65%;
+}
+
+.keep-img {
+  width: 26px;
+  height: 35px;
+}
+
+.keep-txt {
+  font-size: 22px;
+  padding-left: 20px;
+}
+
+.menu-icon {
+  font-size: 24px;
+  margin-left: -10%;
+  margin-right: 10%;
+  width: 24px;
+  cursor: pointer;
+}
+
+.searchBar {
+  width: 80%;
+  box-sizing: border-box;
+  border: none;
+  background-color: #f1f3f4;
+  border-radius: 8px;
+  font-size: 16px;
+  background-position: 10px 10px;
+  padding: 12px 20px 12px 40px;
+  background-image: url("../assets/search_icon.png");
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+}
+
+.subnav-three {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: gainsboro;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2%;
+  outline: none;
+  background-color: transparent;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/*************************************************** Side Drawer Here *********************************************/
+.myDrawer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  width: 65px;
+  height: 500px;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+}
+.myDrawer .notes, .myDrawer .remainder, .myDrawer .label, .myDrawer .archive, .myDrawer .trash {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 5px;
+  border-radius: 50%;
+}
+.myDrawer .notes .drawer-span, .myDrawer .remainder .drawer-span, .myDrawer .label .drawer-span, .myDrawer .archive .drawer-span, .myDrawer .trash .drawer-span {
+  align-items: center;
+  display: none;
+}
+.myDrawer .notes {
+  background-color: #feefc3;
+}
+.myDrawer img {
+  display: flex;
+  justify-content: center;
+  margin: 12px;
+}
+.myDrawer div:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0 25px 25px 0;
+  height: 48px;
+}
+.myDrawer div:hover .drawer-span {
+  display: flex;
+  margin-left: 40px;
+}
+
+/************************************************* SnackBar Here ************************************************/
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  position: fixed;
+  bottom: 60px;
+  left: 50%;
+  margin-left: -125px;
+  background-color: #333;
+  padding: 16px;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  z-index: 1;
+  font-size: 17px;
+}
+
+#snackbar.display {
+  visibility: visible;
+  animation: fadeIn 0.5s, fadeOut 0.5s 2.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    bottom: 0px;
+    opacity: 0;
+  }
+  to {
+    bottom: 60px;
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    bottom: 60px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+/*************************************************** User Profile Info Here *********************************************/
+.userProfile {
+  display: none;
+}
+.userProfile .myProfile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 160px;
+  border: 1px solid grey;
+  border-radius: 8px;
+  float: right;
+  margin-right: 5px;
+}
+.userProfile .myProfile .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 8px 0 5px 0;
+}
+.userProfile .myProfile #name {
+  margin-bottom: 5px;
+}
+.userProfile .myProfile #mail {
+  margin-bottom: 15px;
+}
+.userProfile .myProfile button {
+  width: 100px;
+  height: 25px;
+  text-decoration: none;
+}
+
+/*************************************************** Add Note Here *********************************************/
+.add-note {
+  position: absolute;
+  top: 16%;
+  left: 22%;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px 2px #e0e0e0;
+}
+
+.note {
+  width: 600px;
+  height: 45px;
+  font-family: "Noto Sans", sans-serif;
+  text-decoration-color: gainsboro;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  padding-left: 12px;
+}
+
+.sub-note2 {
+  display: none;
+  border: none;
+  outline: none;
+}
+
+.add-note3 {
+  display: none;
+  flex-direction: row;
+}
+.add-note3 .btns {
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+}
+.add-note3 .btns .myBtns {
+  width: 34px;
+  height: 34px;
+  margin: 0 8px;
+}
+.add-note3 button {
+  width: 80px;
+  height: 35px;
+  padding: 8px 20px;
+  background-color: white;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  float: right;
+  margin-right: 15px;
+}
+.add-note3 button:hover {
+  background-color: whitesmoke;
+}
+.add-note3 .my-Btn-img {
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  padding: 8px;
+}
+.add-note3 .my-Btn-img:hover {
+  background-color: whitesmoke;
+}
+.add-note3 #add-note-palette:hover .myPalette {
+  display: flex;
+}
+
+/*************************************************** Card Here *********************************************/
+#card {
+  display: flex;
+  align-items: flex-start;
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 800px;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/******************************************************************************************************************************/
+.moreBtn {
+  display: flex;
+  flex-direction: column;
+}
+
+.moreBtn:hover .dropdown {
+  display: flex;
+}
+.moreBtn:hover .note-img {
+  display: flex;
+}
+
+.my-note {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-wrap: anywhere;
+  flex-direction: column;
+  width: 240px;
+  min-height: 120px;
+  border: 2px solid whitesmoke;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.my-note .title-div, .my-note .note-div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: "Noto Sans", sans-serif;
+  text-decoration-color: gainsboro;
+  min-height: 40px;
+  padding: 4px 16px 12px;
+  overflow-wrap: anywhere;
+  outline: none;
+}
+.my-note .title-div {
+  font-size: 16px;
+}
+.my-note .note-div {
+  font-size: 18px;
+}
+.my-note .btns-div {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.my-note .note-btns {
+  display: flex;
+  align-self: center;
+  width: 34px;
+  height: 34px;
+}
+.my-note .note-img {
+  display: none;
+  margin: 8px;
+  border-radius: 50%;
+}
+.my-note .note-img:hover {
+  background-color: #e0e0e0;
+}
+.my-note .dropdown {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+  font-size: 14px;
+  padding: 5px 5px 5px 10px;
+  width: 160px;
+  height: 180px;
+  border: 0px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 2px 6px 2px rgba(60, 64, 67, 0.15);
+  background-color: #fff;
+}
+.my-note .dropdown .dropdown-item {
+  font-family: "Noto Sans", sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 160px;
+  height: 30px;
+}
+.my-note .dropdown .dropdown-item:hover {
+  background-color: whitesmoke;
+}
+
+.my-note:hover .note-img {
+  display: flex;
+}
+
+/*************************************************** Color Palette ******************************************************/
+.myPalette {
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  z-index: 1;
+  min-width: 100px;
+  min-height: 100px;
+  position: absolute;
+  border-radius: 8px;
+}
+.myPalette .color-palette {
+  display: flex;
+  flex-direction: column;
+  width: 35px;
+  border: 1px solid gainsboro;
+  height: 35px;
+  border-radius: 50%;
+}
+
+#palette:hover {
+  display: flex;
+}
+#palette:hover .myPalette {
+  display: flex;
+}
+
+/*************************************************** Edit Note ******************************************************/
+.edit-note {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  margin: auto;
+  height: 135px;
+  border: 1px solid transparent;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px 2px #e0e0e0;
+}
+
+.edit {
+  width: 600px;
+  height: 45px;
+  font-family: "Noto Sans", sans-serif;
+  text-decoration-color: gainsboro;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  padding-left: 12px;
+}
+
+.edit-sub-note2 {
+  display: flex;
+  border: none;
+  outline: none;
+}
+
+.edit-note3 {
+  display: flex;
+  flex-direction: row;
+}
+.edit-note3 .btns {
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+}
+.edit-note3 .btns .myBtns {
+  width: 34px;
+  height: 34px;
+  margin: 0 8px;
+}
+.edit-note3 button {
+  width: 80px;
+  height: 35px;
+  padding: 8px 20px;
+  background-color: white;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  float: right;
+  margin-right: 15px;
+}
+.edit-note3 button:hover {
+  background-color: whitesmoke;
+}
+.edit-note3 .my-Btn-img {
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  padding: 8px;
+}
+.edit-note3 .my-Btn-img:hover {
+  background-color: whitesmoke;
+}
+
+/******************************************************************************************************************************/
+@media only screen and (max-width: 900px) {
+  .searchBar {
+    width: 100%;
+  }
+
+  .subnav-one {
+    width: 20%;
+  }
+
+  .subnav-two {
+    width: 65%;
+  }
+
+  .note {
+    width: 550px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .note {
+    width: 450px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .subnav-one {
+    width: 24%;
+  }
+
+  .subnav-two {
+    width: 55%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .subnav-one {
+    width: 30%;
+  }
+
+  .subnav-two {
+    width: 55%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .subnav-one {
+    width: 30%;
+  }
+
+  .subnav-two {
+    width: 50%;
+  }
+
+  .menu-icon {
+    margin-left: 20%;
+  }
+
+  .keep-txt {
+    padding-left: 5px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .subnav-one {
+    width: 40%;
+  }
+
+  .menu-icon {
+    margin-left: 10%;
+  }
+
+  .subnav-two {
+    width: 38%;
+  }
+
+  .keep-txt {
+    padding-left: 5px;
+  }
+
+  .notes, .remainder, .label, .archive, .trash {
+    z-index: 1;
+  }
+
+  .myDrawer {
+    z-index: 1;
+  }
+
+  .note {
+    width: 200px;
+  }
+
+  .add-note {
+    width: 200px;
+  }
+
+  .btns {
+    width: 200px;
+  }
+  .btns .myBtns {
+    width: 16px;
+  }
+
+  .add-note3 button {
+    width: 50px;
+    padding: 8px 5px;
+  }
+}
+
+/*# sourceMappingURL=dashboard.css.map */

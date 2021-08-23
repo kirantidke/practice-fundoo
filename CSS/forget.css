@@ -1,0 +1,169 @@
+body{
+    width: 100%; 
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+/**************************************************** Form Here *******************************************************/
+.forget-password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+/**************************************************** Image Here *******************************************************/
+.image{
+    display: flex;
+    justify-content: center;
+}
+.img1{
+    font-family: 'Noto Sans', sans-serif;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 22px;
+    padding-bottom: 16px;
+    width: 100px;
+    height: 24px;
+}
+#f{
+    color: #1976d2;
+}
+#u{
+    margin-left: -5px;
+    color: #FF0000;
+}
+#n{
+    margin-left: -5px;
+    color: #FFD700;
+}
+#d{
+    margin-left: -5px;
+    color: #1976d2;
+}#o1{
+    margin-left: -5px;
+    color: #FF0000;
+}
+#o2{
+    margin-left: -5px;
+    color: #006400;
+}
+/**************************************************** Column Here *******************************************************/
+.column{
+    border: 1px solid;
+    padding: 20px 20px 30px 20px;
+    border-radius: 8px;
+    border-color: gainsboro;
+    width: 350px;
+    height: 500px;
+}
+@media only screen and (max-width: 400px){
+    .column{
+        width: 340px;
+    }
+}
+/**************************************************** Header Here *******************************************************/
+h1{
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    font-family: 'Noto Sans', sans-serif;
+    color: black;
+    font-size: 24px;
+}
+/**************************************************** Label Here *******************************************************/
+label{
+    display: flex;
+    justify-content: center;
+    font-family: 'Noto Sans', sans-serif;
+    color: black;
+    font-size: 16px;
+}
+/**************************************************** Input Field Here *******************************************************/
+#username{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 15px;
+    align-content: flex-start;
+    display: flex;
+    height: 35px;
+    width: 340px;
+    border-width: 1px;
+    margin-top: 35px;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: gainsboro;
+    padding-left: 7px;
+}
+/**************************************************** Button Here *******************************************************/
+.nextBtn{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 40px;
+}
+.button{
+    float: right;
+    width: 80px;
+    height: 34px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: blue;
+}
+.button3:hover{
+    background-color: rgb(31, 31, 204);
+}
+
+/************************************************* SnackBar Here ************************************************/
+#snackbar{
+    visibility: hidden;
+    min-width: 250px;
+    position: fixed;
+    bottom: 60px;
+    left: 50%;
+    margin-left: -125px;
+    background-color: #333;
+    padding: 16px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    font-size: 17px;
+}
+#snackbar.display{
+    visibility: visible;
+    animation: fadeIn 0.5s, fadeOut 0.5s 2.5s;
+}
+@keyframes fadeIn{
+    from{
+        bottom: 0px;
+        opacity: 0;
+    }
+    to{
+        bottom: 60px;
+        opacity: 1;
+    }
+}
+@keyframes fadeOut{
+    from{
+        bottom: 60px;
+        opacity: 1;
+    }
+    to{
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+/**************************************************** Error Here *******************************************************/
+#emailError{
+    color: red;
+    text-align: start;
+}
+
+@media only screen and (max-width: 600px){
+    .column{
+        border: none;
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/dashboard.css">
+
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <!-- NavBar Here -->
+    <div class="navbar">
+        <div class="subnav-one">
+            <div class="menu-icon" onclick="openDrawer()">&#9776;</div>
+            <div><img src="../assets/keep_logo.png" class="keep-img"></div>
+            <span class="keep-txt">Keep</span>
+        </div>
+        <div class="subnav-two">
+            <input class="searchBar" type="text" name="search" placeholder="Search">
+        </div>
+        <button class="subnav-three" onclick="userProfile()"><img src="../assets/avatar.png" alt="Avatar"
+                class="avatar"></button>
+    </div>
+    <div class="userProfile">
+        <div class="myProfile">
+            <img src="../assets/avatar.png" alt="Avatar" class="avatar">
+            <div id="name"></div>
+            <div id="mail"></div>
+            <button onclick="logOut()">Logout</button>
+        </div>
+    </div>
+    <!-- SnackBar -->
+    <div id="snackbar"></div>
+    <!-- Side Drawer Here -->
+    <div class="myDrawer">
+        <div class="notes drawer"><img src="../assets/bulb_icon.png" alt=""><span class="drawer-span">Notes</span></div>
+        <div class="remainder drawer"><img src="../assets/bell_icon.png" alt=""><span
+                class="drawer-span">Remainder</span></div>
+        <div class="label drawer"><img src="../assets/edit_icon.png" alt=""><span class="drawer-span">Edit labels</span>
+        </div>
+        <div class="archive drawer"><img src="../assets/archive_icon.png" alt=""><span
+                class="drawer-span">Archives</span></div>
+        <div class="trash drawer"><img src="../assets/trash_icon.png" alt=""><span class="drawer-span">Trash</span>
+        </div>
+    </div>
+    <div class="add-note">
+        <div class="add-note1"><input type="text" class="sub-note1 note" id="title" onclick="addNote()"
+                placeholder="Take a note..."></div>
+        <div class="add-note2"><input type="text" class="sub-note2 note" id="note" placeholder="Take a note..."></div>
+        <div class="add-note3" id="add-note-btns"></div>
+    </div>
+    <!-- Card Here -->
+    <input type="file" id="imgupload" style="display:none" />
+    <div id="card"></div>
+    <div class="edit-note">
+        <div class="edit-note1"><input type="text" class="edit-sub-note1 edit" id="e-title"></div>
+        <div class="edit-note2"><input type="text" class="edit-sub-note2 edit" id="e-note"></div>
+        <div class="edit-note3" id="edit-note-btns"></div>
+    </div>
+    <!------------------js----------------------->
+    <script src="../JS/dashboard.js"></script>
+    <script src="../Service/service.js"></script>
+    <script src="../JS/validation.js"></script>
+</body>
+
+</html>
